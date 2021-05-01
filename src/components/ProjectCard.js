@@ -12,7 +12,9 @@ const ProjectCard = props => {
           Launch App
         </Button>
 
-        <Button variant="primary">Github Repo</Button>
+        <Button href={props.repoLink} target="_blank" variant="primary">
+          Github Repo
+        </Button>
       </Card.Body>
     </Card>
   );
