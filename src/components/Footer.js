@@ -1,12 +1,11 @@
 import React from 'react';
-import { Navbar } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import '../style.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <Navbar bg='light'>
-        <Navbar.Brand className='center-align-items'>Footer</Navbar.Brand>
-      </Navbar>
+    <footer className='footer'>
+      <p className='text-center'>© Ray Luna 2021</p>
     </footer>
   );
 };

@@ -1,12 +1,8 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import '../style.css';
 
-const NavBar = (props) => {
+const NavBar = () => {
   return (
     <>
       <Navbar className='nav-top' expand='lg'>
