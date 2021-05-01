@@ -1,7 +1,9 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import ProjectCard from './ProjectCard';
-import SocialButterfly from '../images/screenshot.png';
+import SocialButterfly from '../images/social-butterfly.png';
+import recipeBook from '../images/recipe-book.png';
+import madLibz from '../images/madlibz.png';
 
 export const Projects = () => {
   return (
@@ -16,16 +18,16 @@ export const Projects = () => {
             </Col>
             <Col>
               <ProjectCard
-                title='Social Butterfly'
+                title='Recipe Book'
                 text='The messaging app of the future.'
-                imgSrc={SocialButterfly}
+                imgSrc={recipeBook}
               />
             </Col>
             <Col>
               <ProjectCard
-                title='Social Butterfly'
+                title='MadLibz!'
                 text='The messaging app of the future.'
-                imgSrc={SocialButterfly}
+                imgSrc={madLibz}
               />
             </Col>
           </Row>
