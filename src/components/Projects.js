@@ -12,7 +12,7 @@ export const Projects = () => {
         <Col>
           <ProjectCard
             title="Social Butterfly"
-            text="The messaging app of the future."
+            text="  This is a messenger app for keeping in touch with friends and family and to me new people! This app allows the user to create an account, search users by username and add new contacts. The public chat allows each user to communicate with other members of the Social Butterfly Community. This app is built on a serverless architecture using React and Firebase."
             imgSrc={SocialButterfly}
             appLink="https://messenger-app-rsl.herokuapp.com/Login"
             repoLink="https://github.com/messenger-app-team/messenger-app"
@@ -30,10 +30,10 @@ export const Projects = () => {
         <Col>
           <ProjectCard
             title="MadLibz!"
-            text=""
+            text="This is a whimsical web application which allows a user create their own MadLibz story by entering a set of words or generated randomly based on part of speech!"
             imgSrc={madLibz}
-            appLink=""
-            repoLink=""
+            appLink="https://teammadlibz.github.io/MadLibz/"
+            repoLink="https://github.com/TeamMadLibz/MadLibz/"
           />
         </Col>
       </Row>
