@@ -3,11 +3,11 @@ import { Navbar } from 'react-bootstrap';
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <Navbar bg='light'>
         <Navbar.Brand className='center-align-items'>Footer</Navbar.Brand>
       </Navbar>
-    </div>
+    </footer>
   );
 };
 
