@@ -5,7 +5,8 @@ export const Contacts = () => {
   return (
     <div className='contacts-section'>
       <Card>
-        <h2>Contacts Section</h2>
+        <h1>Contact</h1>
+        email: <link href='gat'></link>
       </Card>
     </div>
   );

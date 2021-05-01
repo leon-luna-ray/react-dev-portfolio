@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router } from 'react';
 import { Container } from "react-bootstrap";
 import NavBar from './components/NavBar.js';
 import About from './components/About.js';
@@ -7,14 +8,16 @@ import Contact from './components/Contact.js';
 
 function App() {
   return (
-    <main>
-      <NavBar />
-      <Container>
-        <About />
-        <Projects />
-        <Contact />
-      </Container>
-    </main>
+    <Router>
+      <main>
+        <NavBar />
+        <Container>
+          <About />
+          <Projects />
+          <Contact />
+        </Container>
+      </main>
+    </Router>
   );
 }
 
