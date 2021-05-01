@@ -4,6 +4,9 @@ import ProjectCard from './ProjectCard';
 import SocialButterfly from '../images/social-butterfly.png';
 import recipeBook from '../images/recipe-book.png';
 import madLibz from '../images/madlibz.png';
+import eatDaBurger from "../images/eatdaburger.png";
+import budgetTracker from "../images/budget-tracker.png";
+import readmeGenerator from "../images/readme-generator.png";
 
 export const Projects = () => {
   return (
@@ -40,29 +43,29 @@ export const Projects = () => {
       <Row>
         <Col>
           <ProjectCard
-            title="Social Butterfly"
-            text="The messaging app of the future."
-            imgSrc={SocialButterfly}
-            appLink=""
-            repoLink=""
+            title="EatDaBurger"
+            text="A fun burger ordering app! The user can order any burger they like. The burger will be saved in their burger queque and moved to the devoured side when the user clicks eat-da-burger! This is a Heroku app build with node.js."
+            imgSrc={eatDaBurger}
+            appLink="https://burger-app-rluna.herokuapp.com/"
+            repoLink="https://github.com/leon-luna-ray/burgers-app"
           />
         </Col>
         <Col>
           <ProjectCard
-            title="Social Butterfly"
-            text="The messaging app of the future."
-            imgSrc={SocialButterfly}
-            appLink=""
-            repoLink=""
+            title="Budget Tracker"
+            text="A progressive web app for tracking your budget while travelling and on the go. This app allows the user to enter and track expenses both when the app is online or offline. The offline storage is done using a service worker file and manifest. The app will automatically update the app database as soon as the connection is restored."
+            imgSrc={budgetTracker}
+            appLink="https://budget-tracker-rluna.herokuapp.com/"
+            repoLink="https://github.com/leon-luna-ray/budget-tracker"
           />
         </Col>
         <Col>
           <ProjectCard
-            title="Social Butterfly"
-            text="The messaging app of the future."
-            imgSrc={SocialButterfly}
-            appLink=""
-            repoLink=""
+            title="Readme Generator"
+            text="A command line application to seamlessly create a new ReadMe file for your projects quickly! This application will ask you all the right questions to generate a professional quality readme from the command line. As a developer this app saves me a lot of time!"
+            imgSrc={readmeGenerator}
+            appLink="https://www.youtube.com/watch?v=XI6C2lgj540"
+            repoLink="https://github.com/leon-luna-ray/hw09-readme-generator"
           />
         </Col>
       </Row>
