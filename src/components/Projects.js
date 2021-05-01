@@ -1,50 +1,37 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
+import ProjectCard from './ProjectCard';
+import SocialButterfly from '../images/screenshot.png';
 
 export const Projects = () => {
   return (
-    <div className="projects-section">
-      <Card>
-        <h2>Projects Section</h2>
-
-        <div class="feature-card card-panel hoverable">
-          <div class="feature-content row">
-            <div class="feature-info col s12 m6">
-              <h2 class="feature-title">RecipeBook</h2>
-              <p class="feature-text ">
-                An online recipe book to view sand save your favorite recipes.
-                This is a Heroku app built using Node.js, Express, Handlebars,
-                Sequelize, Passport and Materialize.
-              </p>
-              <p class="feature-text">
-                The application allows the user to create an account, add
-                recipes, view recipes, search stored recipes and print the
-                recipe.
-              </p>
-            </div>
-
-            <div class="feature-img col s12 m6">
-              <img
-                class="card responsive-img"
-                src="./assets/images/recipe-book.png"
-                alt="recipe-book"
-              /></div>
-            </div>
-
-            <div class="card-action">
-              <a
-                href="https://arcane-peak-55315.herokuapp.com/"
-                target="_blank"
-              >
-                Application
-              </a>
-              <a href="https://github.com/kurtp23/recipe-book" target="_blank">
-                GitHub Repository
-              </a>
-            </div>
-          </div>
-      </Card>
-    </div>
+    <Container>
+      <div className='projects-section'>
+        <Row>
+          <Col>
+            <ProjectCard
+              title='Social Butterfly'
+              text='The messaging app of the future.'
+              imgSrc={SocialButterfly}
+            />
+          </Col>
+          <Col>
+            <ProjectCard
+              title='Social Butterfly'
+              text='The messaging app of the future.'
+              imgSrc='../images/screenshot.png'
+            />
+          </Col>
+          <Col>
+            <ProjectCard
+              title='Social Butterfly'
+              text='The messaging app of the future.'
+              imgSrc='../images/screenshot.png'
+            />
+          </Col>
+        </Row>
+      </div>
+    </Container>
   );
 };
 
