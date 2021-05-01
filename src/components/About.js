@@ -1,13 +1,13 @@
 import React from 'react';
 import { Card, Image } from 'react-bootstrap';
-import ProfileImg from '../img/ray.jpg';
+import ProfileImg from '../images/ray-sq.jpg';
 
 export const About = () => {
   return (
     <section className='about-section'>
       <Card>
         <h2>About Section</h2>
-        {/* <Image src={ProfileImg} rounded fluid /> */}
+        <Image src={ProfileImg} rounded fluid />
         <p>
           Hello world! I'm Ray. I'm a full-stack web developer and currently a
           student with University of Oregon's Coding Boot Camp. The reason I got

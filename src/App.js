@@ -1,23 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router } from 'react';
+// import { BrowserRouter as Router } from 'react';
 import { Container } from "react-bootstrap";
 import NavBar from './components/NavBar.js';
+import Footer from './components/Footer.js';
 import About from './components/About.js';
 import Projects from './components/Projects.js';
 import Contact from './components/Contact.js';
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <main>
         <NavBar />
         <Container>
           <About />
           <Projects />
           <Contact />
+          <Footer />
         </Container>
       </main>
-    </Router>
+    // </Router>
   );
 }
 
