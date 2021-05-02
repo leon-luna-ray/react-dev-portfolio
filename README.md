@@ -5,6 +5,8 @@
 
   This is the repository for my responsive coding portfolio build with React. This is a single page setup with dynamic rendering using React Router. It has about, project and contact sections that render dynamically while the nav and footer remain throughout.
 
+  [🚀 Launch](https://leon-luna-ray.github.io/react-portfolio/#/) 
+
   ## Table of Contents
 
   * [Image](#image)
@@ -48,7 +50,7 @@
 
   ## Links
 
-  - [Deployed Project](n/a) 
+  - [Deployed Project](https://leon-luna-ray.github.io/react-portfolio/#/) 
 
   - [Project Repository](https://github.com/leon-luna-ray/react-portfolio)
 
