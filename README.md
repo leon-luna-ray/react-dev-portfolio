@@ -39,10 +39,4 @@ If you have any questions about the repo, open an issue or contact me directly a
 - E-Mail: leon.luna.ray@gmail.com
 - GitHub: [leon-luna-ray](https://github.com/leon-luna-ray)
 
-## Links
-
-- [Deployed Project](https://leon-luna-ray.github.io/react-portfolio/#/) 
-
-- [Project Repository](https://github.com/leon-luna-ray/react-portfolio)
-
   
