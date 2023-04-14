@@ -10,12 +10,16 @@ const skills = await fetchSkills();
 export const About = () => {
   const profileImage = getImageUrl(profile.image).size(300, 300).url();
 
+  const listItems = (items) => {
+    return items.map((item) => <li>{item.title}</li>);
+  };
+
   const skillsList = skills.map((skill) => {
     return (
       <Col>
         <h4>{skill.title}</h4>
         <ul>
-          { skill.skills.map(item => (<li>{item.title}</li>)) }
+          {listItems(skill.skills)}
         </ul>
       </Col>
     );
@@ -45,9 +49,7 @@ export const About = () => {
                   <h3>Skills</h3>
                 </Col>
               </Row>
-              <Row>
-                {skillsList}
-              </Row>
+              <Row>{skillsList}</Row>
             </Col>
           </Row>
         </Container>
