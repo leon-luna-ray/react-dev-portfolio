@@ -1,37 +1,43 @@
-import React from 'react';
-import { Card, Image, Container, Row, Col } from 'react-bootstrap';
-import ProfileImg from '../images/ray-sq.jpg';
-import '../style.css';
+import React from "react";
+import { getImageUrl, fetchProfile, fetchSkills } from "../data/sanity";
+import { Card, Image, Container, Row, Col } from "react-bootstrap";
+import "../style.css";
+
+// Refactor to pull on lifecycle hook and set to state
+const profile = await fetchProfile();
+const skills = await fetchSkills();
 
 export const About = () => {
+  const profileImage = getImageUrl(profile.image).size(300, 300).url();
+
+  const skillsList = skills.map((skill) => {
+    return (
+      <Col>
+        <h4>{skill.title}</h4>
+        <ul>
+          { skill.skills.map(item => (<li>{item.title}</li>)) }
+        </ul>
+      </Col>
+    );
+  });
+
   return (
-    <section className='about-section'>
+    <section className="about-section">
       <Card>
-        <Container className='card-container'>
+        <Container className="card-container">
           <Row>
-            <Col className='card-title'>
-              <h2 className='text-center'>About Me</h2>
+            <Col className="card-title">
+              <h2 className="text-center">About Me</h2>
             </Col>
           </Row>
           <Row>
             <Col xs={6} md={4}>
-              <Image src={ProfileImg} thumbnail fluid />
+              <Image src={profileImage} thumbnail fluid />
             </Col>
             <Col>
               <Row>
                 <Col>
-                  <p>
-                    Hello world! I'm Ray. I'm a full-stack web developer and
-                    currently a student with University of Oregon's Coding Boot
-                    Camp. The reason I got into coding is because find it allows
-                    me to constantly challenge myself. I love to learn and I'm
-                    always looking for something new to expand my knowledge. I
-                    have an interest in both front-end and back-end development
-                    and learning new languages and technologies. Originally from
-                    Mexicali, Mexico and currently living in the Portland,
-                    Oregon metro area. My hobbies are cooking, language, travel
-                    and photography.
-                  </p>
+                  <p>{profile.bio}</p>
                 </Col>
               </Row>
               <Row>
@@ -40,30 +46,7 @@ export const About = () => {
                 </Col>
               </Row>
               <Row>
-                <Col>
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Javascript</li>
-                    <li>Jquery</li>
-                  </ul>
-                </Col>
-                <Col>
-                  <ul>
-                    <li>Node.js</li>
-                    <li>Express JS</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
-                  </ul>
-                </Col>
-                <Col>
-                  <ul>
-                    <li>Handlebars</li>
-                    <li>React</li>
-                    <li>MERN Stack</li>
-                    <li>Firebase</li>
-                  </ul>
-                </Col>
+                {skillsList}
               </Row>
             </Col>
           </Row>
