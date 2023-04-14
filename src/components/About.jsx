@@ -18,9 +18,7 @@ export const About = () => {
     return (
       <Col>
         <h4>{skill.title}</h4>
-        <ul>
-          {listItems(skill.skills)}
-        </ul>
+        <ul>{listItems(skill.skills)}</ul>
       </Col>
     );
   });

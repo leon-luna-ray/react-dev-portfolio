@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 import { Card, Button } from "react-bootstrap";
 
-const ProjectCard = props => {
+const ProjectCard = (props) => {
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={props.imgSrc} />
