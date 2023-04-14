@@ -17,7 +17,6 @@ export const About = () => {
             <Col xs={6} md={4}>
               <Image src={ProfileImg} thumbnail fluid />
             </Col>
-
             <Col>
               <Row>
                 <Col>

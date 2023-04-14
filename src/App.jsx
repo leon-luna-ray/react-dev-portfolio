@@ -12,7 +12,6 @@ function App() {
     <Router>
       <main>
         <NavBar />
-
         <div className='page-content'>
           <Container>
             <Switch>
@@ -28,7 +27,6 @@ function App() {
             </Switch>
           </Container>
         </div>
-
         <Row>
           <Footer />
         </Row>

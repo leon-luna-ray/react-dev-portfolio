@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://leon-luna-ray.github.io/react-portfolio",
   "dependencies": {
+    "@sanity/client": "^5.4.2",
+    "@sanity/image-url": "^1.0.2",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
