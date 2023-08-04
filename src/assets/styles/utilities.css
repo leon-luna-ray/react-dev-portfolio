@@ -42,3 +42,15 @@
 .zoom-in-out:hover {
   transform: scale(1.03);
 }
+
+.typing-container {
+  font-family: monospace;
+  overflow: hidden;
+  border-right: 0.15em solid;
+  animation: cursor 1s step-end infinite;
+}
+
+@keyframes cursor {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}

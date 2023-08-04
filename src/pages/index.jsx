@@ -1,7 +1,7 @@
 import React from "react";
 import { getImageUrl, fetchProfile, fetchSkills } from "../data/sanity";
 import { Card, Image, Container, Row, Col } from "react-bootstrap";
-
+import TypingEffect from '../components/TypingEffect';
 
 // Refactor to pull on lifecycle hook and set to state
 const profile = await fetchProfile();
@@ -25,6 +25,7 @@ export const HomePage = () => {
 
   return (
     <main className='home page'>
+
       <Card>
         <Container className="card-container">
           <Row>
@@ -39,7 +40,7 @@ export const HomePage = () => {
             <Col>
               <Row>
                 <Col>
-                  <p>{profile.bio}</p>
+                  <TypingEffect text={profile.bio} />
                 </Col>
               </Row>
               <Row>
