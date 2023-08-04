@@ -1,0 +1,24 @@
+html {
+  font-family: Arial, sans-serif;
+  background-color: #0000aa;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+h1,
+h2,
+h2,
+h4,
+h5 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-family: 'Handjet', cursive;
+  letter-spacing: 2px;
+}
+
+a {
+  color: inherit;
+}

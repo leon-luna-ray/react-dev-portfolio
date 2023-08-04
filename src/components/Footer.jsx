@@ -4,8 +4,10 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="footer">
-      <p className="text-center">© Ray Luna {year}</p>
+    <footer className="container">
+      <div className="inner">
+        <span>© Ray Luna {year}</span>
+      </div>
     </footer>
   );
 };

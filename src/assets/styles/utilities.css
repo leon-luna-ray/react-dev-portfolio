@@ -1,0 +1,44 @@
+.red-border {
+  border: 3px solid red;
+}
+.green-border {
+  border: 3px solid green;
+}
+.blue-border {
+  border: 3px solid blue;
+}
+.container {
+  margin: 0 auto;
+  max-width: 100rem;
+  width: 99%;
+}
+@media (min-width: 640px) {
+  .container {
+    width: 90%;
+  }
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+/* Text */
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Animations */
+.zoom-in-out {
+  transition: transform .3s;
+}
+.zoom-in-out:hover {
+  transform: scale(1.03);
+}
