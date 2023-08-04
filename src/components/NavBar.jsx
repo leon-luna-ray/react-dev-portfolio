@@ -4,7 +4,7 @@ import "../style.css";
 
 const NavBar = () => {
   return (
-    <>
+    <header>
       <Navbar className="nav-top" expand="lg">
         <Navbar.Brand href="#">Ray Luna</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -16,7 +16,7 @@ const NavBar = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </>
+    </header>
   );
 };
 

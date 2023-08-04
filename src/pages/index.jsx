@@ -1,7 +1,7 @@
 import React from "react";
 import { getImageUrl, fetchProfile, fetchSkills } from "../data/sanity";
 import { Card, Image, Container, Row, Col } from "react-bootstrap";
-import "../style.css";
+
 
 // Refactor to pull on lifecycle hook and set to state
 const profile = await fetchProfile();
@@ -24,7 +24,7 @@ export const HomePage = () => {
   });
 
   return (
-    <section className="about-section">
+    <main className='home page'>
       <Card>
         <Container className="card-container">
           <Row>
@@ -52,7 +52,7 @@ export const HomePage = () => {
           </Row>
         </Container>
       </Card>
-    </section>
+    </main>
   );
 };
 
