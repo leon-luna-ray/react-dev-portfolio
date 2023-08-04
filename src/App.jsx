@@ -3,9 +3,10 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { Container, Row } from "react-bootstrap";
 import NavBar from "./components/NavBar.jsx";
 import Footer from "./components/Footer.jsx";
-import About from "./components/About.jsx";
+// import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
+import HomePage from './pages/index.jsx'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Container>
             <Switch>
               <Route exact path="/">
-                <About />
+                <HomePage />
               </Route>
               <Route exact path="/projects">
                 <Projects />

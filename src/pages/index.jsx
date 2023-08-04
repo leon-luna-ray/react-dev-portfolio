@@ -7,7 +7,7 @@ import "../style.css";
 const profile = await fetchProfile();
 const skills = await fetchSkills();
 
-export const About = () => {
+export const HomePage = () => {
   const profileImage = getImageUrl(profile.image).size(300, 300).url();
 
   const mapListItems = (items) => {
@@ -56,4 +56,4 @@ export const About = () => {
   );
 };
 
-export default About;
+export default HomePage;
