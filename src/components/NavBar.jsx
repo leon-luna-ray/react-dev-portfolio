@@ -1,10 +1,10 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ developer, title }) => {
   return (
     <header className='container'>
-      <div className="site-title">Ray Luna</div>
-      <div className="subtitle">Developer Portfolio</div>
+      <div className="site-title">{developer}</div>
+      <div className="subtitle">{title}</div>
     </header>
   );
 };

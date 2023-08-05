@@ -1,23 +1,11 @@
 import React, { useEffect, useState } from "react";
 import {
-
-  fetchSkills,
-
-} from "../data/sanity";
+  getImageUrl,
+} from "../lib/api";
 import TypingEffect from '../components/TypingEffect';
 
-export const HomePage = ({ profileImage, profile }) => {
-  const [skills, setSkills] = useState([]);
+export const HomePage = ({ profileImage, profile, skills, projects }) => {
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const skillsData = await fetchSkills();
-
-      setSkills(skillsData);
-    };
-
-    fetchData();
-  }, []);
 
   const mapListItems = (items) => {
     return items.map((item, index) => <li key={index}>{item.title}</li>);
@@ -31,12 +19,25 @@ export const HomePage = ({ profileImage, profile }) => {
       </div>
     );
   });
+  const projectCards = projects.map((project) => {
+    return (
+      <div key={project._id}>
+        <h4>{project.title}</h4>
+        <img src={getImageUrl(project.mainImage).size(300, 300).url()} alt="" />
+      </div>
+    );
+  });
 
   return (
     <main className='home page container'>
       {profileImage && <img src={profileImage} alt="Profile" />}
       {profile && <TypingEffect text={profile.bio} />}
-      {skillsList}
+      <div className="skills-list">
+        {skillsList}
+      </div>
+      <div className="featured-projects grid">
+        {projectCards}
+      </div>
     </main>
   );
 };
