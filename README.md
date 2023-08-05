@@ -5,7 +5,7 @@
 
 This is the repository for my responsive coding portfolio built with React. This is a single page setup with dynamic rendering using React Router. It has an about, project and contact section that each pull data from Sanity.io CMS.
 
-Project URL: [https://react-portfolio-rldev.netlify.app/](https://react-portfolio-rldev.netlify.app/) 
+Project URL: [https://react-portfolio-rldev.netlify.app/](https://react-portfolio-rldev.netlify.app/)
 
 ## Table of Contents
 
@@ -20,23 +20,20 @@ Project URL: [https://react-portfolio-rldev.netlify.app/](https://react-portfoli
 
 ## Technologies
 
+* React.js
+* CSS3
+* HTML5
 * Javascript
-* React 18
-* React-Bootstrap
-* Vite.js
-* HTML
-* CSS
-* Sanity
-* GROQ
 * Netlify
+* Sanity
+* Vite.js
 
 
 ## Contact
 
-Author: Ray Luna 
+Author: Ray Luna
 
 If you have any questions about the repo, open an issue or contact me directly at:
 - E-Mail: leon.luna.ray@gmail.com
 - GitHub: [leon-luna-ray](https://github.com/leon-luna-ray)
 
-  

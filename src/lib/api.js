@@ -14,8 +14,29 @@ export function getImageUrl(source) {
   return builder.image(source);
 }
 
+export async function fetchGlobal() {
+  const query = `*[_type == "globalSettings"]`;
+  const global = await client.fetch(query);
+
+  return global;
+}
+
+export async function fetchFeaturedProjects() {
+  const query = `*[_type == "project" && featured] | order(_updatedAt desc) {
+      _id,
+      intro,
+      description,
+      mainImage,
+      slug,
+      status,
+      title,
+    }`;
+  const projects = await client.fetch(query);
+
+  return projects;
+}
+
 export async function fetchProfile() {
-  // Sanity queires are in the GROQ query language
   const query = `*[_type == "profileDetails"][0]`;
   const profile = await client.fetch(query);
 
@@ -27,13 +48,6 @@ export async function fetchHobbies() {
   const hobbies = await client.fetch(query);
 
   return hobbies;
-}
-
-export async function fetchFeaturedProjects() {
-  const query = `*[_type == "project" && featured] | order(_updatedAt desc)`;
-  const projects = await client.fetch(query);
-
-  return projects;
 }
 
 export async function fetchSkills() {
