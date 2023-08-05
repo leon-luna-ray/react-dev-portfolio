@@ -1,28 +1,19 @@
 import React, { useEffect, useState } from "react";
 import {
-  getImageUrl,
-  fetchProfile,
+
   fetchSkills,
+
 } from "../data/sanity";
 import TypingEffect from '../components/TypingEffect';
 
-export const HomePage = () => {
-  const [profile, setProfile] = useState(null);
+export const HomePage = ({ profileImage, profile }) => {
   const [skills, setSkills] = useState([]);
-
-  const [profileImage, setProfileImage] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const profileData = await fetchProfile();
       const skillsData = await fetchSkills();
 
-      setProfile(profileData);
       setSkills(skillsData);
-
-      if (profileData?.image) {
-        setProfileImage(getImageUrl(profileData.image).size(300, 300).url());
-      }
     };
 
     fetchData();
