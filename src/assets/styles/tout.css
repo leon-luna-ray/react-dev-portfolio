@@ -1,4 +1,10 @@
 .about {
-    display: flex;
-    column-gap: 2rem;
+  display: flex;
+  column-gap: 2rem;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+    .about {
+        flex-direction: row;
+    }
 }
