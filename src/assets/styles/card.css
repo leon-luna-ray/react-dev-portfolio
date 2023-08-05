@@ -1,0 +1,10 @@
+/* .card.project {
+    border:3px solid salmon;
+    display: flex;
+    flex-direction: column;
+    row-gap: ;
+} */
+
+.card.project img {
+    width: 100%;
+}

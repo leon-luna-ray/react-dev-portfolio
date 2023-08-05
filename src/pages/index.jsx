@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
-import {
-  getImageUrl,
-} from "../lib/api";
+import React from "react";
+
+import { getImageUrl } from "../lib/api";
 import TypingEffect from '../components/TypingEffect';
 
 export const HomePage = ({ profileImage, profile, skills, projects }) => {
-
-
   const mapListItems = (items) => {
     return items.map((item, index) => <li key={index}>{item.title}</li>);
   };
@@ -21,22 +18,35 @@ export const HomePage = ({ profileImage, profile, skills, projects }) => {
   });
   const projectCards = projects.map((project) => {
     return (
-      <div key={project._id}>
-        <h4>{project.title}</h4>
+      <div key={project._id} className='card project flex-col'>
         <img src={getImageUrl(project.mainImage).size(300, 300).url()} alt="" />
+        <h4>{project.title}</h4>
+        <p>{project.intro}</p>
       </div>
     );
   });
 
   return (
     <main className='home page container'>
-      {profileImage && <img src={profileImage} alt="Profile" />}
-      {profile && <TypingEffect text={profile.bio} />}
-      <div className="skills-list">
-        {skillsList}
+      <div className="about">
+        {profileImage && <img src={profileImage} alt="Profile" />}
+        {profile && <TypingEffect text={profile.bio} />}
       </div>
-      <div className="featured-projects grid">
-        {projectCards}
+      <div className="skills section">
+        <div className="title">
+          <h2 className="label">Skills</h2>
+        </div>
+        <div className="skills-list">
+          {skillsList}
+        </div>
+      </div>
+      <div className="projects section">
+        <div className="title">
+          <h2 className="label">Projects</h2>
+        </div>
+        <div className="featured-projects grid">
+          {projectCards}
+        </div>
       </div>
     </main>
   );
