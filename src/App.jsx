@@ -17,26 +17,36 @@ function App() {
   const [profile, setProfile] = useState(null);
   const [global, setGlobal] = useState(null);
   const [profileImage, setProfileImage] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      const profileData = await fetchProfile();
-      const globalData = await fetchGlobal();
+      try {
+        const profileData = await fetchProfile();
+        const globalData = await fetchGlobal();
 
-      setProfile(profileData);
-      setGlobal(globalData);
+        setProfile(profileData);
+        setGlobal(globalData);
 
-      if (profileData?.image) {
-        setProfileImage(getImageUrl(profileData.image).size(300, 300).url());
+        if (profileData?.image) {
+          setProfileImage(getImageUrl(profileData.image).size(300, 300).url());
+        }
+      } catch (err) {
+        console.error(err);
+        setError('An error occurred while fetching data.');
       }
     };
 
     fetchData();
   }, []);
 
+  if (error) {
+    return <div>{error}</div>;
+  }
+
   return (
     <>
-      <NavBar />
+      <NavBar developer={profile?.name} title={global?.title} />
       <HomePage profileImage={profileImage} profile={profile} />
       <Footer />
     </>
