@@ -3,25 +3,22 @@ import {
   getImageUrl,
   fetchProfile,
   fetchSkills,
-  fetchGlobal,
 } from "../data/sanity";
 import TypingEffect from '../components/TypingEffect';
 
 export const HomePage = () => {
   const [profile, setProfile] = useState(null);
   const [skills, setSkills] = useState([]);
-  const [global, setGlobal] = useState(null);
+
   const [profileImage, setProfileImage] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       const profileData = await fetchProfile();
       const skillsData = await fetchSkills();
-      const globalData = await fetchGlobal();
 
       setProfile(profileData);
       setSkills(skillsData);
-      setGlobal(globalData);
 
       if (profileData?.image) {
         setProfileImage(getImageUrl(profileData.image).size(300, 300).url());
