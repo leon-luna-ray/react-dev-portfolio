@@ -23,18 +23,6 @@
   row-gap: 1rem;
 }
 
-/* Text */
-.capitalize {
-  text-transform: capitalize;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.label {
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
 /* Animations */
 .zoom-in-out {
   transition: transform .3s;
@@ -43,14 +31,3 @@
   transform: scale(1.03);
 }
 
-.typing-container {
-  font-family: monospace;
-  overflow: hidden;
-  border-right: 0.15em solid;
-  animation: cursor 1s step-end infinite;
-}
-
-@keyframes cursor {
-  from, to { border-color: transparent }
-  50% { border-color: black }
-}

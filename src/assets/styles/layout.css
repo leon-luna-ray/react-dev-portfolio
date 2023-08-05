@@ -1,0 +1,17 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.section .title {
+    display: flex;
+    justify-content: center;
+
+}

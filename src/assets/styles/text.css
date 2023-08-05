@@ -1,0 +1,30 @@
+/* Text */
+.typing-container {
+  overflow: hidden;
+  border-right: 0.15em solid;
+  animation: cursor 1s step-end infinite;
+}
+
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.label {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #0000aa;
+  background-color: lightgray;
+  width: max-content;
+  padding: 0.1rem 0.2rem;
+}
