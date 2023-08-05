@@ -1,0 +1,14 @@
+footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+footer .inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: center;
+    justify-items: center;
+}
+footer .inner span {
+    text-align: center;
+}

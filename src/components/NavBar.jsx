@@ -1,25 +1,12 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import "../style.css";
 
-const NavBar = () => {
+const NavBar = ({ developer, title }) => {
   return (
-    <>
-      <Navbar className="nav-top" expand="lg">
-        <Navbar.Brand href="#">Ray Luna</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#">About</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#contact">Contact</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </>
+    <header className='container'>
+      <div className="site-title">{developer}</div>
+      <div className="subtitle">{title}</div>
+    </header>
   );
 };
 
 export default NavBar;
-
-// Need ot add links to download resume
