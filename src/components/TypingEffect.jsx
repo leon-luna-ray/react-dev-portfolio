@@ -8,7 +8,7 @@ const TypingEffect = ({ text, typingSpeed = 10 }) => {
     let i = 0;
 
     const typingInterval = setInterval(() => {
-      if (i < length) {
+      if (i < length - 1) {
         setContent(prevContent => prevContent + text[i]);
         i++;
       } else {

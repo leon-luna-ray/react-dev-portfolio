@@ -1,10 +1,12 @@
 import React from "react";
+import TypingEffect from './TypingEffect';
+
 
 const NavBar = ({ developer, title }) => {
   return (
     <header className='container'>
-      <div className="site-title">{developer}</div>
-      <div className="subtitle">{title}</div>
+      <h1 className="site-title">{developer}</h1>
+      {title && <TypingEffect text={title} typingSpeed={70}/>}
     </header>
   );
 };
