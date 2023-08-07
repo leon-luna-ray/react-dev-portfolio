@@ -44,12 +44,12 @@ export const HomePage = ({ profileImage, profile, skills, projects }) => {
           {projectCards}
         </div>
       </div>
-      <div className="contact section">
+      {/* <div className="contact section">
         <div className="title">
           <h2 className='label'>Get in touch</h2>
         </div>
         <ContactForm />
-      </div>
+      </div> */}
     </main>
   );
 };

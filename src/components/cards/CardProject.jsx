@@ -4,7 +4,7 @@ import { getImageUrl } from "../../lib/api";
 export const CardProject = ({ project }) => {
     console.log(project)
     return (
-        <div className='card project flex-col'>
+        <div className='card project'>
             <div className="img-wrap">
                 <img src={getImageUrl(project.mainImage).size(300, 300).url()} alt={project.title} />
             </div>

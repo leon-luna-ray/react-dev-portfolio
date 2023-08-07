@@ -8,8 +8,3 @@
         flex-direction: row;
     }
 }
-
-.skills.section {
-  color: var(--bsod-blue);
-  background-color: lightgray;
-}
