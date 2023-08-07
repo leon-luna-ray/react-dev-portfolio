@@ -1,7 +1,9 @@
 import React from "react";
 
-import { getImageUrl } from "../lib/api";
+
 import TypingEffect from '../components/TypingEffect';
+import ContactForm from '../components/ContactForm';
+import CardProject from '../components/cards/CardProject';
 
 export const HomePage = ({ profileImage, profile, skills, projects }) => {
   const mapListItems = (items) => {
@@ -17,13 +19,7 @@ export const HomePage = ({ profileImage, profile, skills, projects }) => {
     );
   });
   const projectCards = projects.map((project) => {
-    return (
-      <div key={project._id} className='card project flex-col'>
-        <img src={getImageUrl(project.mainImage).size(300, 300).url()} alt="" />
-        <h4>{project.title}</h4>
-        <p>{project.intro}</p>
-      </div>
-    );
+    return <CardProject key={project._id} project={project} />
   });
 
   return (
@@ -48,6 +44,12 @@ export const HomePage = ({ profileImage, profile, skills, projects }) => {
           {projectCards}
         </div>
       </div>
+      {/* <div className="contact section">
+        <div className="title">
+          <h2 className='label'>Get in touch</h2>
+        </div>
+        <ContactForm />
+      </div> */}
     </main>
   );
 };

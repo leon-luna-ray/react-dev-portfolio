@@ -30,6 +30,8 @@ export async function fetchFeaturedProjects() {
       slug,
       status,
       title,
+      url,
+      repository,
     }`;
   const projects = await client.fetch(query);
 

@@ -1,3 +1,7 @@
+:root {
+  --bsod-blue: #0000aa;
+}
+
 body {
   font-family: 'Share Tech Mono', monospace;
   background-color: #0000aa;
@@ -16,7 +20,7 @@ h1 {
 }
 h1,
 h2,
-h2,
+h3,
 h4,
 h5 {
   font-family: 'Handjet', cursive;
@@ -29,4 +33,9 @@ h5 {
 
 a {
   color: inherit;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
