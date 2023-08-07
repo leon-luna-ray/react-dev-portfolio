@@ -55,7 +55,7 @@ function App() {
     <>
       <NavBar developer={profile?.name} title={global?.title} />
       <HomePage profileImage={profileImage} profile={profile} skills={skills} projects={projects} />
-      <Footer />
+      <Footer name={profile?.name}  />
     </>
   );
 }
