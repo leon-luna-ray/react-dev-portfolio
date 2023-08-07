@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import TypingEffect from '../components/TypingEffect';
 import ContactForm from '../components/ContactForm';
 import CardProject from '../components/cards/CardProject';

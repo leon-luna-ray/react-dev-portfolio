@@ -2,7 +2,6 @@ import React from "react";
 import { getImageUrl } from "../../lib/api";
 
 export const CardProject = ({ project }) => {
-    console.log(project)
     return (
         <div className='card project'>
             <div className="img-wrap">
@@ -16,7 +15,6 @@ export const CardProject = ({ project }) => {
                     <a href={project.repository} target='_blank' className="button">Code</a>
                 </div>
             </div>
-
         </div>
     );
 }
