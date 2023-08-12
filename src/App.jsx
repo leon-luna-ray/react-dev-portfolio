@@ -59,11 +59,7 @@ function App() {
         profile={profile}
         skills={skills}
         projects={projects} />
-      <Footer
-        name={profile?.name}
-        github={profile?.github}
-        email={profile?.email}
-        linkedin={profile?.linkedin} />
+      <Footer />
     </>
   );
 }

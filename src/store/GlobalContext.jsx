@@ -9,6 +9,7 @@ import {
     fetchGlobal,
     fetchSkills,
     fetchFeaturedProjects,
+    getImageUrl
 } from "../lib/api";
 
 const GlobalContext = createContext();

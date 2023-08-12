@@ -5,20 +5,31 @@ import IconLinkedin from './icons/IconLinkedin'
 import IconGithub from './icons/IconGithub'
 import IconEmail from './icons/IconEmail'
 
-const Footer = ({ name }) => {
+const Footer = () => {
   const { profile } = useGlobalContext();
-  console.log(profile)
   const year = new Date().getFullYear();
 
   return (
     <footer className="container">
       <div className="inner">
         <div className="social-icons">
-          <IconEmail />
-          <IconGithub />
-          <IconLinkedin />
+          {profile?.github && (
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">
+              <IconGithub />
+            </a>
+          )}
+          {profile?.linkedin && (
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+              <IconLinkedin />
+            </a>
+          )}
+          {profile?.email && (
+            <a href={`mailto:${profile.email}`}>
+              <IconEmail />
+            </a>
+          )}
         </div>
-        <span>© {name} {year}</span>
+        <span>© {profile?.name} {year}</span>
       </div>
     </footer>
   );
