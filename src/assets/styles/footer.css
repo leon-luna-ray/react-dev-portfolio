@@ -1,14 +1,26 @@
 footer {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 footer .inner {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-    justify-content: center;
-    justify-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  justify-content: center;
+  justify-items: center;
 }
 footer .inner span {
-    text-align: center;
+  text-align: center;
+}
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5em;
+}
+footer .social-icons svg {
+  height: 3rem;
+  fill: white;
+}
+footer .social-icons svg:hover {
+  cursor: pointer;
 }
