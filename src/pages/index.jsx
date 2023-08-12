@@ -1,10 +1,13 @@
 import React from "react";
+import { useGlobalContext } from "../store/GlobalContext";
 
 import TypingEffect from '../components/TypingEffect';
 import ContactForm from '../components/ContactForm';
 import CardProject from '../components/cards/CardProject';
 
-export const HomePage = ({ profileImage, profile, skills, projects }) => {
+export const HomePage = () => {
+  const { profile, profileImage, projects, skills } = useGlobalContext();
+
   const mapListItems = (items) => {
     return items.map((item, index) => <li key={index}>{item.title}</li>);
   };
@@ -39,16 +42,47 @@ export const HomePage = ({ profileImage, profile, skills, projects }) => {
         <div className="title">
           <h2 className="label">Projects</h2>
         </div>
-        <div className="featured-projects grid">
+        <div className="featured-projects grid-3">
           {projectCards}
         </div>
       </div>
-      {/* <div className="contact section">
+      <div className="contact section">
         <div className="title">
           <h2 className='label'>Get in touch</h2>
         </div>
-        <ContactForm />
-      </div> */}
+        <div className="content">
+          <div className="contact-info">
+            <h3>Contact Info</h3>
+            <ul className="contact-list flex-col">
+              {profile?.github && (<li>
+                <span>Email:</span>
+                <a href={`mailto:${profile?.email}`} target="_blank">
+                  {profile?.email}
+                </a>
+              </li>)}
+              {profile?.github && (<li>
+                <span>Github:</span>
+                <a href={profile?.github} target="_blank">
+                  {profile?.github}
+                </a>
+              </li>)}
+              {profile?.linkedin && (<li>
+                <span>Linkedin:</span>
+                <a href={profile?.linkedin} target="_blank">
+                  {profile?.linkedin}
+                </a>
+              </li>)}
+              {profile?.website && (<li>
+                <span>Website:</span>
+                <a href={profile?.website} target="_blank">
+                  {profile?.website}
+                </a>
+              </li>)}
+            </ul>
+          </div>
+          {/* <ContactForm /> */}
+        </div>
+      </div>
     </main>
   );
 };

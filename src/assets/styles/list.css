@@ -5,8 +5,25 @@
   padding: 2rem;
   text-align: center;
 }
+.skills-list h4 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 @media (max-width: 640px) {
   .skills-list {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+}
+
+.contact-list {
+  row-gap: 1rem;
+}
+.contact-list li {
+  display: flex;
+  gap: 1rem;
+}
+.contact-list li span {
+  text-transform: uppercase;
 }

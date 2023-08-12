@@ -1,12 +1,15 @@
 import React from "react";
+import { useGlobalContext } from "../store/GlobalContext";
+
 import TypingEffect from './TypingEffect';
 
+const NavBar = () => {
+  const { global, profile } = useGlobalContext();
 
-const NavBar = ({ developer, title }) => {
   return (
     <header className='container mobile-container'>
-      <h1 className="site-title">{developer}</h1>
-      {title && <TypingEffect text={title} typingSpeed={70}/>}
+      <h1 className="site-title">{profile?.name}</h1>
+      {global?.title && <TypingEffect text={global.title} typingSpeed={70} />}
     </header>
   );
 };
