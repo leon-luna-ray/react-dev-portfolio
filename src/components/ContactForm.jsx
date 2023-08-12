@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useGlobalContext } from "../store/GlobalContext";
 
 const ContactForm = () => {
+    const { profile } = useGlobalContext();
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',

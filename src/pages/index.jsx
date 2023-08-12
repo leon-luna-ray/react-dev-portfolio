@@ -42,16 +42,21 @@ export const HomePage = () => {
         <div className="title">
           <h2 className="label">Projects</h2>
         </div>
-        <div className="featured-projects grid">
+        <div className="featured-projects grid-3">
           {projectCards}
         </div>
       </div>
-      {/* <div className="contact section">
+      <div className="contact section">
         <div className="title">
           <h2 className='label'>Get in touch</h2>
         </div>
-        <ContactForm />
-      </div> */}
+        <div className="content">
+          <div className="contact-info">
+            <h3>Contact Info</h3>
+          </div>
+          <ContactForm />
+        </div>
+      </div>
     </main>
   );
 };
