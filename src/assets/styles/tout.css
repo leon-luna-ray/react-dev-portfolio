@@ -18,6 +18,9 @@
 }
 
 .contact.section .content {
-  border:3px solid red;
-  display: grid;
+  border: 1px solid;
+  padding: 2rem;
+}
+.contact.section .contact-info h3 {
+  text-transform: uppercase;
 }

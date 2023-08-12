@@ -53,8 +53,34 @@ export const HomePage = () => {
         <div className="content">
           <div className="contact-info">
             <h3>Contact Info</h3>
+            <ul className="contact-list flex-col">
+              {profile?.github && (<li>
+                <span>Email:</span>
+                <a href={`mailto:${profile?.email}`} target="_blank">
+                  {profile?.email}
+                </a>
+              </li>)}
+              {profile?.github && (<li>
+                <span>Github:</span>
+                <a href={profile?.github} target="_blank">
+                  {profile?.github}
+                </a>
+              </li>)}
+              {profile?.linkedin && (<li>
+                <span>Linkedin:</span>
+                <a href={profile?.linkedin} target="_blank">
+                  {profile?.linkedin}
+                </a>
+              </li>)}
+              {profile?.website && (<li>
+                <span>Website:</span>
+                <a href={profile?.website} target="_blank">
+                  {profile?.website}
+                </a>
+              </li>)}
+            </ul>
           </div>
-          <ContactForm />
+          {/* <ContactForm /> */}
         </div>
       </div>
     </main>
