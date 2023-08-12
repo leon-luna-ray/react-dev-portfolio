@@ -10,9 +10,9 @@
 
 /* Animations */
 .zoom-in-out {
-  transition: transform .3s;
+  transition: transform .25s;
 }
 .zoom-in-out:hover {
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 
