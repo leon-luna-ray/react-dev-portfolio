@@ -1,6 +1,6 @@
 .card.project {
   color: var(--bsod-blue);
-  background-color: lightgray;
+  background-color: var(--bsod-grey);
   display: flex;
   flex-direction: column;
   height: 100%;

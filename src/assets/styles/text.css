@@ -22,8 +22,8 @@
 .label {
   text-transform: uppercase;
   font-weight: 600;
-  color: #0000aa;
-  background-color: lightgray;
+  color: var(--bsod-blue);
+  background-color: var(--bsod-grey);
   width: max-content;
   padding: 0.1rem 0.2rem;
 }

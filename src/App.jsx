@@ -54,8 +54,16 @@ function App() {
   return (
     <>
       <NavBar developer={profile?.name} title={global?.title} />
-      <HomePage profileImage={profileImage} profile={profile} skills={skills} projects={projects} />
-      <Footer name={profile?.name}  />
+      <HomePage
+        profileImage={profileImage}
+        profile={profile}
+        skills={skills}
+        projects={projects} />
+      <Footer
+        name={profile?.name}
+        github={profile?.github}
+        email={profile?.email}
+        linkedin={profile?.linkedin} />
     </>
   );
 }

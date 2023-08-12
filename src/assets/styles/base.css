@@ -1,10 +1,11 @@
 :root {
   --bsod-blue: #0000aa;
+  --bsod-grey: lightgray;
 }
 body {
   margin: 0;
   font-family: 'Share Tech Mono', monospace;
-  background-color: #0000aa;
+  background-color: var(--bsod-blue);
 
   color: white;
   font-size: 1.25rem;
