@@ -27,7 +27,7 @@ export const HomePage = ({ profileImage, profile, skills, projects }) => {
         {profileImage && <img src={profileImage} alt="Profile" />}
         {profile && <TypingEffect text={profile.bio} />}
       </div>
-      <div className="skills section">
+      <div className="skills section mobile-container">
         <div className="title">
           <h2 className="label">Skills</h2>
         </div>

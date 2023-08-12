@@ -2,6 +2,7 @@
   --bsod-blue: #0000aa;
 }
 body {
+  margin: 0;
   font-family: 'Share Tech Mono', monospace;
   background-color: #0000aa;
 
@@ -32,4 +33,48 @@ a {
 p {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.mobile-container {
+  padding: 0 1.5rem;
+}
+
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.section .title {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .container {
+    margin: 0 auto;
+    max-width: 65rem;
+    width: 90%;
+  }
+  .mobile-container {
+    padding: 0;
+  }
+  .page {
+    row-gap: 5rem;
+  }
+  .section {
+    row-gap: 4rem;
+  }
 }
