@@ -1,10 +1,13 @@
 import React from "react";
+import { useGlobalContext } from "../store/GlobalContext";
 
 import TypingEffect from '../components/TypingEffect';
 import ContactForm from '../components/ContactForm';
 import CardProject from '../components/cards/CardProject';
 
-export const HomePage = ({ profileImage, profile, skills, projects }) => {
+export const HomePage = () => {
+  const { profile, profileImage, projects, skills } = useGlobalContext();
+
   const mapListItems = (items) => {
     return items.map((item, index) => <li key={index}>{item.title}</li>);
   };
