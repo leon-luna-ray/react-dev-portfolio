@@ -22,7 +22,7 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="flex-col" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Name:</label>
                 <input

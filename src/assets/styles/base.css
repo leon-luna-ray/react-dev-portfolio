@@ -35,11 +35,25 @@ p {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+/* Reset default input styles */
+input[type='text'], input[type='email'] {
+  border: none;
+  border-bottom: 1px solid #fff; /* White underline */
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none; /* Remove outline on focus */
+  color: var(--bsod-grey);
+}
+
+/* Optional: Style on focus */
+input[type='text']:focus , input[type='email']:focus{
+  border-bottom: 1px solid white; /* Change underline color on focus if desired */
+}
 
 .mobile-container {
   padding: 0 1.5rem;
 }
-
 
 .flex-col {
   display: flex;
