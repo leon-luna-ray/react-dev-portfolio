@@ -1,0 +1,45 @@
+.contact.section h3 {
+  text-transform: uppercase;
+}
+.contact.section .content {
+  border: 1px solid;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.contact.section .contact-info {
+  grid-column: span 1;
+}
+.contact.section .contact-form {
+  grid-column: span 1;
+  /* padding-left: 4rem; */
+  margin-right: 2rem;
+}
+.contact-form form input[type='text'],
+.contact-form form input[type='email'] {
+  background-color: transparent;
+  flex: 1;
+  width: 100%;
+}
+.contact-form,
+.contact-form form {
+  row-gap: 1rem;
+}
+.contact-form form .flex-row {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.contact-form .message-area {
+  display: flex;
+  row-gap: 1rem;
+}
+.contact-form .message-area textarea {
+  min-height: 4rem;
+}
+.contact-form form button {
+    width: max-content;
+}
+.contact-form .controls {
+    column-gap:1rem;
+}

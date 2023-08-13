@@ -16,28 +16,3 @@
     padding-top: 4rem;
   }
 }
-
-.contact.section .content {
-  border: 1px solid;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: repeat(9, minmax(0, 1fr));
-}
-.contact.section .contact-info {
-  grid-column: span 4;
-}
-.contact.section .contact-form {
-  grid-column: span 5;
-  width: 80%;
-}
-.contact-form form input {
-  background-color: transparent;
-  width: 100%;
-}
-.contact.section .contact-form,
-.contact.section .contact-form form {
-  row-gap: 1rem;
-}
-.contact.section h3 {
-  text-transform: uppercase;
-}

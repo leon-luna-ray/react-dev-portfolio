@@ -52,10 +52,7 @@ export const HomePage = () => {
           <h2 className='label'>Contact</h2>
         </div>
         <div className="content">
-        <div className="contact-form flex-col">
-            <h3>Get in touch</h3>
-            <ContactForm />
-          </div>
+
           <div className="contact-info">
             <h3>Info</h3>
             <ul className="contact-list flex-col">
@@ -86,7 +83,10 @@ export const HomePage = () => {
             </ul>
           </div>
 
-
+          <div className="contact-form flex-col">
+            <h3>Get in touch</h3>
+            <ContactForm />
+          </div>
         </div>
 
       </div>
