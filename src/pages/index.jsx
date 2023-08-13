@@ -47,12 +47,14 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="contact section">
+
         <div className="title">
-          <h2 className='label'>Get in touch</h2>
+          <h2 className='label'>Contact</h2>
         </div>
         <div className="content">
+
           <div className="contact-info">
-            <h3>Contact Info</h3>
+            <h3>Info</h3>
             <ul className="contact-list flex-col">
               {profile?.github && (<li>
                 <span>Email:</span>
@@ -63,25 +65,30 @@ export const HomePage = () => {
               {profile?.github && (<li>
                 <span>Github:</span>
                 <a href={profile?.github} target="_blank">
-                  {profile?.github}
+                  {profile?.github_user}
                 </a>
               </li>)}
               {profile?.linkedin && (<li>
                 <span>Linkedin:</span>
                 <a href={profile?.linkedin} target="_blank">
-                  {profile?.linkedin}
+                  {profile?.linkedin_user}
                 </a>
               </li>)}
               {profile?.website && (<li>
                 <span>Website:</span>
                 <a href={profile?.website} target="_blank">
-                  {profile?.website}
+                  {profile?.website_name}
                 </a>
               </li>)}
             </ul>
           </div>
-          {/* <ContactForm /> */}
+
+          <div className="contact-form flex-col">
+            <h3>Get in touch</h3>
+            <ContactForm />
+          </div>
         </div>
+
       </div>
     </main>
   );

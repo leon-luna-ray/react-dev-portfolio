@@ -11,16 +11,8 @@
   padding: 0rem 1.5rem 2rem 1.5rem;
 }
 @media (min-width: 640px) {
-    .about {
-        flex-direction: row;
-        padding-top: 4rem;
-    }
-}
-
-.contact.section .content {
-  border: 1px solid;
-  padding: 2rem;
-}
-.contact.section .contact-info h3 {
-  text-transform: uppercase;
+  .about {
+    flex-direction: row;
+    padding-top: 4rem;
+  }
 }

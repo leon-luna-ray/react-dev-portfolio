@@ -5,12 +5,10 @@
   flex-direction: column;
   height: 100%;
 }
-
 .card.project img {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
 }
-
 .card.project .details {
   flex: 1; /* Allow the details section to take up remaining vertical space */
   display: flex;
@@ -18,13 +16,11 @@
   justify-content: space-between;
   padding: 2rem 1.5rem;
 }
-
 .card.project .links {
   display: flex;
   column-gap: 1rem;
   padding-top: 1rem;
 }
-
 @media (min-width: 640px) {
   .card.project .details {
     padding: 1rem;

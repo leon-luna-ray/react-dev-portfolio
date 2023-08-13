@@ -9,3 +9,12 @@
   color: white;
   background-color: var(--bsod-blue);
 }
+
+.button.blue {
+  background-color: transparent;
+  color: white;
+}
+.button.blue:hover {
+  background-color: var(--bsod-grey);
+  color: var(--bsod-blue);
+}

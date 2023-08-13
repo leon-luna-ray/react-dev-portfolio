@@ -22,8 +22,8 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
+        <form className="flex-col" onSubmit={handleSubmit}>
+            <div className='flex-row'>
                 <label htmlFor="name">Name:</label>
                 <input
                     type="text"
@@ -34,7 +34,7 @@ const ContactForm = () => {
                     required
                 />
             </div>
-            <div>
+            <div className='flex-row'>
                 <label htmlFor="email">Email:</label>
                 <input
                     type="email"
@@ -45,7 +45,7 @@ const ContactForm = () => {
                     required
                 />
             </div>
-            <div>
+            <div className='message-area flex-col'>
                 <label htmlFor="message">Message:</label>
                 <textarea
                     id="message"
@@ -55,7 +55,10 @@ const ContactForm = () => {
                     required
                 ></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <div className="controls flex-row">
+                <button type="submit" className='button blue'>Submit</button>
+                <button type="submit" className='button blue'>Canel</button>
+            </div>
         </form>
     );
 };
