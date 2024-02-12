@@ -5,11 +5,8 @@ import React, {
     useState
 } from "react";
 import {
-    fetchProfile,
-    fetchGlobal,
-    fetchSkills,
-    fetchFeaturedProjects,
-    getImageUrl
+    getImageUrl,
+    fetchHomePage,
 } from "../lib/api";
 
 const GlobalContext = createContext();
@@ -21,7 +18,7 @@ export function useGlobalContext() {
 export function GlobalProvider({ children }) {
     const [profile, setProfile] = useState(null);
     const [global, setGlobal] = useState(null);
-    const [profileImage, setProfileImage] = useState(null);
+    const [profileImageURL, setProfileImageURL] = useState(null);
     const [skills, setSkills] = useState([]);
     const [projects, setProjects] = useState([]);
     const [error, setError] = useState(null);
@@ -29,18 +26,15 @@ export function GlobalProvider({ children }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const profileData = await fetchProfile();
-                const globalData = await fetchGlobal();
-                const skillsData = await fetchSkills();
-                const projectsData = await fetchFeaturedProjects();
+                const data = await fetchHomePage();
+                
+                setSkills(data?.skillsGroups);
+                setProfile(data?.profile);
+                setGlobal(data?.global);
+                setProjects(data?.projects.projects);
 
-                setSkills(skillsData);
-                setProfile(profileData);
-                setGlobal(globalData[0]);
-                setProjects(projectsData);
-
-                if (profileData?.image) {
-                    setProfileImage(getImageUrl(profileData.image).size(300, 300).url());
+                if (data?.profile.image) {
+                    setProfileImageURL(getImageUrl(data?.profile.image).size(300, 300).url());
                 }
             } catch (err) {
                 console.error(err);
@@ -54,7 +48,7 @@ export function GlobalProvider({ children }) {
     const contextValue = {
         profile,
         global,
-        profileImage,
+        profileImageURL,
         skills,
         projects,
         error,

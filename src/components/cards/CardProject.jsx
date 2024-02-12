@@ -6,7 +6,8 @@ export const CardProject = ({ project }) => {
         <div className='card project'>
 
             <div className="img-wrap">
-                <img src={getImageUrl(project.mainImage).size(300, 300).url()} alt={project.title} />
+                <img src={getImageUrl(project.mainImage).size(300, 300).url()} alt={project.mainImage.altText || 
+                'Project screenshot'} />
             </div>
 
             <div className="details">

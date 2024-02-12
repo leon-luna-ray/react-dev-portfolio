@@ -14,47 +14,50 @@ export function getImageUrl(source) {
   return builder.image(source);
 }
 
-export async function fetchGlobal() {
-  const query = `*[_type == "globalSettings"]`;
-  const global = await client.fetch(query);
-
-  return global;
-}
-
-export async function fetchFeaturedProjects() {
-  const query = `*[_type == "project" && featured] | order(_updatedAt desc) {
+// API Queries
+const queryGlobalSettings = `*[_type == "globalSettings"][0]`
+const querySkillsGroups = `*[_type == "skillsList"] | order(title) {title, "skills" : skills[] -> {title, website}}`;
+const queryProfile = `*[_type == "profileDetails"][0]{
+    ...,
+    "image": image.asset->{
       _id,
-      intro,
-      description,
-      mainImage,
-      slug,
-      status,
       title,
-      url,
-      repository,
-    }`;
-  const projects = await client.fetch(query);
-
-  return projects;
+      altText,
+      description,
+    }
+  }`
+const queryProjectGroup = (slug) => {
+  return `*[_type == "projectGroup" && slug.current == "${slug}"] | order(title asc) {
+      _id,
+      title,
+      slug,
+      description,
+      projects[]->{
+        _id, 
+        intro, 
+        "mainImage": mainImage.asset->{
+          _id,
+          title,
+          altText,
+          description,
+        }, 
+        slug, 
+        status, 
+        title, 
+        technologies[]->{_id, title, slug,},
+      },
+    }[0]`;
 }
 
-export async function fetchProfile() {
-  const query = `*[_type == "profileDetails"][0]`;
-  const profile = await client.fetch(query);
+// API Requests
+export async function fetchHomePage() {
+  const query = `{
+      "global": ${queryGlobalSettings},
+      "profile": ${queryProfile},
+      "projects": ${queryProjectGroup('backend-projects')},
+      "skillsGroups": ${querySkillsGroups}
+  }`;
+  const data = await client.fetch(query);
 
-  return profile;
-}
-
-export async function fetchHobbies() {
-  const query = `*[_type == "profileDetails"][0] { "hobbies" : hobbies[] -> {title} }`;
-  const hobbies = await client.fetch(query);
-
-  return hobbies;
-}
-
-export async function fetchSkills() {
-  const query = `*[_type == "skillsList"] | order(title) {title, "skills" : skills[] -> {title, website}}`;
-  const skills = await client.fetch(query);
-
-  return skills;
+  return data;
 }
