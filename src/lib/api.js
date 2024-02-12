@@ -54,7 +54,7 @@ export async function fetchHomePage() {
   const query = `{
       "global": ${queryGlobalSettings},
       "profile": ${queryProfile},
-      "projects": ${queryProjectGroup('react-portfolio')},
+      "projects": ${queryProjectGroup('reactjs-portfolio')},
       "skillsGroups": ${querySkillsGroups}
   }`;
   const data = await client.fetch(query);
