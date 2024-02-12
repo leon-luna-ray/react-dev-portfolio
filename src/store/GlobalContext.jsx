@@ -5,11 +5,8 @@ import React, {
     useState
 } from "react";
 import {
-    fetchProfile,
-    fetchGlobal,
-    fetchSkills,
-    fetchFeaturedProjects,
-    getImageUrl
+    getImageUrl,
+    fetchHomePage,
 } from "../lib/api";
 
 const GlobalContext = createContext();
@@ -29,18 +26,15 @@ export function GlobalProvider({ children }) {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const profileData = await fetchProfile();
-                const globalData = await fetchGlobal();
-                const skillsData = await fetchSkills();
-                const projectsData = await fetchFeaturedProjects();
+                const data = await fetchHomePage();
+                
+                setSkills(data?.skillsGroups);
+                setProfile(data?.profile);
+                setGlobal(data?.global);
+                setProjects(data?.projects.projects);
 
-                setSkills(skillsData);
-                setProfile(profileData);
-                setGlobal(globalData[0]);
-                setProjects(projectsData);
-
-                if (profileData?.image) {
-                    setProfileImage(getImageUrl(profileData.image).size(300, 300).url());
+                if (data?.profile.image) {
+                    setProfileImage(getImageUrl(data?.profile.image).size(300, 300).url());
                 }
             } catch (err) {
                 console.error(err);
