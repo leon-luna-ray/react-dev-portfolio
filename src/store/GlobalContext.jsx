@@ -18,7 +18,7 @@ export function useGlobalContext() {
 export function GlobalProvider({ children }) {
     const [profile, setProfile] = useState(null);
     const [global, setGlobal] = useState(null);
-    const [profileImage, setProfileImage] = useState(null);
+    const [profileImageURL, setProfileImageURL] = useState(null);
     const [skills, setSkills] = useState([]);
     const [projects, setProjects] = useState([]);
     const [error, setError] = useState(null);
@@ -34,7 +34,7 @@ export function GlobalProvider({ children }) {
                 setProjects(data?.projects.projects);
 
                 if (data?.profile.image) {
-                    setProfileImage(getImageUrl(data?.profile.image).size(300, 300).url());
+                    setProfileImageURL(getImageUrl(data?.profile.image).size(300, 300).url());
                 }
             } catch (err) {
                 console.error(err);
@@ -48,7 +48,7 @@ export function GlobalProvider({ children }) {
     const contextValue = {
         profile,
         global,
-        profileImage,
+        profileImageURL,
         skills,
         projects,
         error,

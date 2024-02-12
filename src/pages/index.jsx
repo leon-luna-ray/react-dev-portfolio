@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm';
 import CardProject from '../components/cards/CardProject';
 
 export const HomePage = () => {
-  const { profile, profileImage, projects, skills } = useGlobalContext();
+  const { profile, profileImageURL, projects, skills } = useGlobalContext();
 
   const mapListItems = (items) => {
     return items.map((item, index) => <li key={index}>{item.title}</li>);
@@ -27,7 +27,7 @@ export const HomePage = () => {
   return (
     <main className='home page container'>
       <div className="about">
-        {profileImage && <img src={profileImage} alt="Profile" />}
+        {profile && <img src={profileImageURL} alt={profile.image.altText || 'Profile Image'} />}
         {profile && <TypingEffect text={profile.bio} />}
       </div>
       <div className="skills section mobile-container">
